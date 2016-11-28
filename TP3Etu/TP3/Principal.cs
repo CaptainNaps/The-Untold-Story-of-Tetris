@@ -16,6 +16,10 @@ namespace TP3
     // Représentation visuelles du jeu en mémoire.
     PictureBox[,] toutesImagesVisuelles = null;
 
+    // Tableau des états qui correspond à ce qui sera associé au tableau de picturebox
+    // François
+    TypeBloc[,] tableauEtats = null;
+    // François
 
     // Variables qui déterminent les dimensions du tableau de jeu
     //Jade
@@ -45,6 +49,9 @@ namespace TP3
     {
       // Création d'une surface de jeu x colonnes par y lignes
       toutesImagesVisuelles = new PictureBox[nbLignes, nbCols];
+      //Jade
+      tableauEtats = new TypeBloc[nbLignes, nbCols];
+      //Jade
       tableauJeu.Controls.Clear();
       tableauJeu.ColumnCount = toutesImagesVisuelles.GetLength(1);
       tableauJeu.RowCount = toutesImagesVisuelles.GetLength(0);
@@ -68,6 +75,10 @@ namespace TP3
           // Ajout dynamique du PictureBox créé dans la grille de mise en forme.
           // A noter que l' "origine" du repère dans le tableau est en haut à gauche. // Modifier l'origine pour la génération des pièces lors de la partie?y
           tableauJeu.Controls.Add(newPictureBox, j, i);
+          //Initialisation du tableau des états
+          //Jade
+          tableauEtats[i, j] = TypeBloc.None;
+          //Jade
         }
       }
     }
