@@ -40,15 +40,16 @@
       this.label1.TabIndex = 0;
       this.label1.Text = "label1";
       // 
-      // Form2
+      // Histoire
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-      this.ClientSize = new System.Drawing.Size(3114, 1565);
+      this.ClientSize = new System.Drawing.Size(1389, 430);
       this.Controls.Add(this.label1);
       this.ForeColor = System.Drawing.Color.Lime;
-      this.Name = "Form2";
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+      this.Name = "Histoire";
       this.Text = "Form2";
       this.ResumeLayout(false);
       this.PerformLayout();
