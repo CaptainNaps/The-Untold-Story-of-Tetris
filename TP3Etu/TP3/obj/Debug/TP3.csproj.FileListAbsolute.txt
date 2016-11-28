@@ -1,1 +1,11 @@
 C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\bin\Debug\TP3.exe.config
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\bin\Debug\TP3.exe
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\bin\Debug\TP3.pdb
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.csprojResolveAssemblyReference.cache
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.Principal.resources
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.Histoire.resources
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.Options.resources
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.Properties.Resources.resources
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.csproj.GenerateResource.Cache
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.exe
+C:\Users\cryom\Documents\Cégep\Programmation\TP3 - Tetris\The-Untold-Story-of-Tetris\TP3Etu\TP3\obj\Debug\TP3.pdb

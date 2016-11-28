@@ -11,7 +11,7 @@ namespace TP3
       InitializeComponent( );
     }
 
-    #region Code fourni
+    #region Jouer une partie
     
     // Représentation visuelles du jeu en mémoire.
     PictureBox[,] toutesImagesVisuelles = null;
@@ -21,10 +21,17 @@ namespace TP3
     TypeBloc[,] tableauEtats = null;
     // François
 
+    // Tableaux qui contient les positions relatives du bloc actif
+    //Jade
+    int[] blocActifX = null;
+    int[] blocActifY = null;
+    //Jade
+
     // Variables qui déterminent les dimensions du tableau de jeu
     //Jade
     int hauteurTabJeu = 20;
     int largeurTabJeu = 10;
+    int pieceAleatoire = 1;
     //Jade
     
     /// <summary>
@@ -82,9 +89,167 @@ namespace TP3
         }
       }
     }
+
+    //Jade
+    /// <summary>
+    /// 
+    /// </summary>
+    void JouerPartie()
+    {
+      bool possibleDeJouer = true;
+      bool possibleDeDaplacer = true;
+      while (possibleDeJouer == true)
+      {
+        AllocationPieceAleatoire();
+        while (possibleDeDaplacer == true)
+        { 
+          //joueur choisi deplacement
+          //verification de possibilité de deplacement
+        }
+      }
+    }
+    //Jade
+
+    //Jade
+    /// <summary>
+    /// 
+    /// </summary>
+    void AllocationPieceAleatoire()
+    {
+      //Random rnd = new Random();
+      //pieceAleatoire = rnd.Next(1,8);
+      blocActifX = new int[3];
+      blocActifY = new int[3];
+      #region Bloc carré
+      if (pieceAleatoire == 1) 
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 0;
+        blocActifX[1] = 1;
+        blocActifX[2] = 0;
+        blocActifX[3] = 1;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 0;
+        blocActifY[2] = 1;
+        blocActifY[3] = 1;
+      }
+      #endregion
+
+      #region Bloc ligne
+      else if (pieceAleatoire == 2) 
+      {
+        blocActifX = new int[4];
+        blocActifY = new int[4];
+
+        blocActifX[0] = 0;
+        blocActifX[1] = 0;
+        blocActifX[2] = 0;
+        blocActifX[3] = 0;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 1;
+        blocActifY[2] = 2;
+        blocActifY[3] = 3;
+      }
+      #endregion
+
+      #region Bloc L
+      else if (pieceAleatoire == 3)
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 0;
+        blocActifX[1] = 0;
+        blocActifX[2] = 0;
+        blocActifX[3] = 1;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 1;
+        blocActifY[2] = 2;
+        blocActifY[3] = 2;
+      }
+      #endregion
+
+      #region Bloc J
+      else if (pieceAleatoire == 4) 
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 1;
+        blocActifX[1] = 1;
+        blocActifX[2] = 0;
+        blocActifX[3] = 1;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 1;
+        blocActifY[2] = 2;
+        blocActifY[3] = 2;
+      }
+      #endregion
+
+      #region Bloc Z
+      else if (pieceAleatoire == 5) 
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 0;
+        blocActifX[1] = 1;
+        blocActifX[2] = 1;
+        blocActifX[3] = 2;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 0;
+        blocActifY[2] = 1;
+        blocActifY[3] = 1;
+      }
+      #endregion
+
+      #region Bloc s
+      else if (pieceAleatoire == 6)
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 1;
+        blocActifX[1] = 2;
+        blocActifX[2] = 0;
+        blocActifX[3] = 1;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 0;
+        blocActifY[2] = 1;
+        blocActifY[3] = 1;
+      }
+      #endregion 
+
+      #region Bloc T
+      else 
+      {
+        blocActifX = new int[3];
+        blocActifY = new int[3];
+
+        blocActifX[0] = 1;
+        blocActifX[1] = 0;
+        blocActifX[2] = 1;
+        blocActifX[3] = 2;
+
+        blocActifY[0] = 0;
+        blocActifY[1] = 1;
+        blocActifY[2] = 1;
+        blocActifY[3] = 1;
+      }
+      #endregion
+    }
+    //Jade
     #endregion
 
-    #region Code à développer
+    #region Tests
     /// <summary>
     /// Faites ici les appels requis pour vos tests unitaires.
     /// </summary>
