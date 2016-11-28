@@ -335,6 +335,10 @@ namespace TP3
 
     #endregion
 
+    private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      
+    }
   }
 
 
