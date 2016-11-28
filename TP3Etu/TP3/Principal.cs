@@ -6,20 +6,17 @@ namespace TP3
 {
   public partial class Principal : Form
   {
-    public Principal( )
+    public Principal()
     {
-      InitializeComponent( );
+      InitializeComponent();
     }
 
     #region Jouer une partie
-    
+
     // Représentation visuelles du jeu en mémoire.
     PictureBox[,] toutesImagesVisuelles = null;
 
-    // Tableau des états qui correspond à ce qui sera associé au tableau de picturebox
-    // François
-    TypeBloc[,] tableauEtats = null;
-    // François
+
 
     // Tableaux qui contient les positions relatives du bloc actif
     //Jade
@@ -37,17 +34,26 @@ namespace TP3
     Deplacement saisieDuJoueur = Deplacement.NoMove;
     //Jade
 
+    // François
+    // Tableau des états qui correspond à ce qui sera associé au tableau de picturebox
+    TypeBloc[,] tableauEtats = null;
+
+    //Variables qui déterminent l'emplacement du bloc actif
+    int ligneCourante = 0;
+    int colonneCourante = 0;
+    // François
+
     /// <summary>
     /// Gestionnaire de l'événement se produisant lors du premier affichage 
     /// du formulaire principal.
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private void frmLoad( object sender, EventArgs e )
+    private void frmLoad(object sender, EventArgs e)
     {
       // Ne pas oublier de mettre en place les valeurs nécessaires à une partie.
       ExecuterTestsUnitaires();
-      InitialiserSurfaceDeJeu(hauteurTabJeu,largeurTabJeu);
+      InitialiserSurfaceDeJeu(hauteurTabJeu, largeurTabJeu);
     }
 
     /// <summary>
@@ -104,13 +110,15 @@ namespace TP3
       while (possibleDeJouer == true)
       {
         AllocationPieceAleatoire();
-        while (possibleDeDeplacer == true)
-        {
-          //Jade
-          SaisirDeplacementJoueur();
-          VerifierBlocPeutBouger();
-          //Jade
-        }
+
+        //François
+        PlacerBlocActif();
+        //François 
+
+        //Jade
+        SaisirDeplacementJoueur();
+        VerifierBlocPeutBouger();
+        //Jade
       }
     }
     //Jade
@@ -128,7 +136,7 @@ namespace TP3
       blocActifX = new int[3];
       blocActifY = new int[3];
       #region Bloc carré
-      if (pieceAleatoire == 1) 
+      if (pieceAleatoire == 1)
       {
         blocActifX = new int[3];
         blocActifY = new int[3];
@@ -146,7 +154,7 @@ namespace TP3
       #endregion
 
       #region Bloc ligne
-      else if (pieceAleatoire == 2) 
+      else if (pieceAleatoire == 2)
       {
         blocActifX = new int[4];
         blocActifY = new int[4];
@@ -182,7 +190,7 @@ namespace TP3
       #endregion
 
       #region Bloc J
-      else if (pieceAleatoire == 4) 
+      else if (pieceAleatoire == 4)
       {
         blocActifX = new int[3];
         blocActifY = new int[3];
@@ -200,7 +208,7 @@ namespace TP3
       #endregion
 
       #region Bloc Z
-      else if (pieceAleatoire == 5) 
+      else if (pieceAleatoire == 5)
       {
         blocActifX = new int[3];
         blocActifY = new int[3];
@@ -236,7 +244,7 @@ namespace TP3
       #endregion 
 
       #region Bloc T
-      else 
+      else
       {
         blocActifX = new int[3];
         blocActifY = new int[3];
@@ -288,9 +296,18 @@ namespace TP3
     /// <param name="saisieDuJoueur"></param>
     void VerifierBlocPeutBouger()
     {
-      
+
     }
+
+    //François
+
+    void PlacerBlocActif()
+    {
+
+    }
+
     //Jade
+
 
     #endregion
 
@@ -299,7 +316,7 @@ namespace TP3
     /// Faites ici les appels requis pour vos tests unitaires.
     /// </summary>
     void ExecuterTestsUnitaires()
-    {      
+    {
       ExecuterTestABC();
       // A compléter...
     }
@@ -308,11 +325,11 @@ namespace TP3
     void ExecuterTestABC()
     {
       // Mise en place des données du test
-      
+
       // Exécuter de la méthode à tester
-      
+
       // Validation des résultats
-      
+
       // Clean-up
     }
 
@@ -320,7 +337,9 @@ namespace TP3
 
   }
 
+
   #region Enums
+
 
   //Jade
   //Type enum des types de blocs possibles dans le tableau de jeu
