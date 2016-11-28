@@ -1,2 +1,3 @@
 C:\Users\MSI_USER\Desktop\École\TPs\TP3 Prog\TP3\TP3Etu\TP3\bin\Debug\TP3.exe.config
-C:\Users\MSI_USER\Desktop\École\TPs\TP3 Prog\TP3\TP3Etu\TP3\obj\Debug\TP3.csprojResolveAssemblyReference.cache
+C:\Users\MSI_USER\Desktop\École\TPs\TP3 Prog\TP3\TP3Etu\TP3\obj\Debug\TP3.exe
+C:\Users\MSI_USER\Desktop\École\TPs\TP3 Prog\TP3\TP3Etu\TP3\obj\Debug\TP3.pdb

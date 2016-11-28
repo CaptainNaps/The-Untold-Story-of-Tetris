@@ -16,9 +16,16 @@ namespace TP3
     // Représentation visuelles du jeu en mémoire.
     PictureBox[,] toutesImagesVisuelles = null;
 
+    // Tableau des états qui correspond à ce qui sera associé au tableau de picturebox
+    // François
+    TypeBloc[,] tableauEtats = null;
+    // François
+
     // Variables qui déterminent les dimensions du tableau de jeu
+    //Jade
     int hauteurTabJeu = 20;
     int largeurTabJeu = 10;
+    //Jade
     
     /// <summary>
     /// Gestionnaire de l'événement se produisant lors du premier affichage 
@@ -96,11 +103,6 @@ namespace TP3
 
   }
 
-
-
-
-
-
-
+  enum TypeBloc { None, Gelé, Carré, Ligne, T, L, J, S, Z }
 
 }
