@@ -16,8 +16,6 @@ namespace TP3
     // Représentation visuelles du jeu en mémoire.
     PictureBox[,] toutesImagesVisuelles = null;
 
-
-
     // Tableaux qui contient les positions relatives du bloc actif
     //Jade
     int[] blocActifX = null;
@@ -117,7 +115,7 @@ namespace TP3
 
         //Jade
         SaisirDeplacementJoueur();
-        VerifierBlocPeutBouger();
+        possibleDeDeplacer = VerifierBlocPeutBouger();
         //Jade
       }
     }
@@ -294,20 +292,19 @@ namespace TP3
     /// Vérifie si le déplacement que la pièce doit faire est possible
     /// </summary>
     /// <param name="saisieDuJoueur"></param>
-    void VerifierBlocPeutBouger()
+    bool VerifierBlocPeutBouger()
     {
-
+      bool peutBouger = true;
+      return peutBouger;
     }
+    //Jade 
 
     //François
-
     void PlacerBlocActif()
     {
 
     }
-
-    //Jade
-
+    //François
 
     #endregion
 
