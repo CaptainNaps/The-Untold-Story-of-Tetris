@@ -281,7 +281,7 @@ namespace TP3
     }
     //Jade
 
-    //
+    //Jade
     /// <summary>
     /// Vérifie si le déplacement que la pièce doit faire est possible
     /// </summary>
@@ -290,7 +290,7 @@ namespace TP3
     {
       
     }
-    //
+    //Jade
 
     #endregion
 
@@ -320,6 +320,8 @@ namespace TP3
 
   }
 
+  #region Enums
+
   //Jade
   //Type enum des types de blocs possibles dans le tableau de jeu
   enum TypeBloc { None, Gelé, Carré, Ligne, T, L, J, S, Z }
@@ -327,4 +329,6 @@ namespace TP3
   //Type enum des déplacements possibles tu joueurs
   enum Deplacement { NoMove /*pas de déplacement, donc la piève descend*/, Left, FastDown, Right, Down }
   //Jade
+
+  #endregion
 }
