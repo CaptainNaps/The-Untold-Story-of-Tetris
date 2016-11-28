@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent( )
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
       this.tableauJeu = new System.Windows.Forms.TableLayoutPanel();
       this.SuspendLayout();
       // 
@@ -54,7 +53,7 @@
       this.tableauJeu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
       this.tableauJeu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
       this.tableauJeu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-      this.tableauJeu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+      this.tableauJeu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
       this.tableauJeu.Location = new System.Drawing.Point(634, 136);
       this.tableauJeu.Margin = new System.Windows.Forms.Padding(0);
       this.tableauJeu.Name = "tableauJeu";
@@ -100,7 +99,7 @@
       this.ClientSize = new System.Drawing.Size(2119, 1903);
       this.Controls.Add(this.tableauJeu);
       this.ForeColor = System.Drawing.Color.Lime;
-      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
       this.KeyPreview = true;
       this.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
       this.Name = "Principal";

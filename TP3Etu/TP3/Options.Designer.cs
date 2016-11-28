@@ -37,6 +37,7 @@
       this.BackColor = System.Drawing.SystemColors.ControlText;
       this.ClientSize = new System.Drawing.Size(1480, 1223);
       this.ForeColor = System.Drawing.Color.Lime;
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
       this.Name = "Options";
       this.Text = "Options de jeu";
       this.ResumeLayout(false);
