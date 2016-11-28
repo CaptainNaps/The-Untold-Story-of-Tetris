@@ -25,15 +25,18 @@ namespace TP3
     //Jade
     int[] blocActifX = null;
     int[] blocActifY = null;
-    //Jade
 
     // Variables qui déterminent les dimensions du tableau de jeu
-    //Jade
     int hauteurTabJeu = 20;
     int largeurTabJeu = 10;
+
+    //Variable qui garde en mémoire quelle pièce est le bloc actif
     int pieceAleatoire = 1;
+
+    //Variable qui garde en mémoire quelle mouvement est à effectuer
+    Deplacement saisieDuJoueur = Deplacement.NoMove;
     //Jade
-    
+
     /// <summary>
     /// Gestionnaire de l'événement se produisant lors du premier affichage 
     /// du formulaire principal.
@@ -97,14 +100,16 @@ namespace TP3
     void JouerPartie()
     {
       bool possibleDeJouer = true;
-      bool possibleDeDaplacer = true;
+      bool possibleDeDeplacer = true;
       while (possibleDeJouer == true)
       {
         AllocationPieceAleatoire();
-        while (possibleDeDaplacer == true)
-        { 
-          //joueur choisi deplacement
-          //verification de possibilité de deplacement
+        while (possibleDeDeplacer == true)
+        {
+          //Jade
+          SaisirDeplacementJoueur();
+          VerifierBlocPeutBouger();
+          //Jade
         }
       }
     }
@@ -112,10 +117,12 @@ namespace TP3
 
     //Jade
     /// <summary>
-    /// 
+    /// Choix aléatoire de la pièce qui sera généré au haut de la partie
+    /// qui sera le nouveau bloc actif
     /// </summary>
     void AllocationPieceAleatoire()
     {
+      //Pour l'instant on ne travaille que avec la pièce carrée
       //Random rnd = new Random();
       //pieceAleatoire = rnd.Next(1,8);
       blocActifX = new int[3];
@@ -247,6 +254,44 @@ namespace TP3
       #endregion
     }
     //Jade
+
+    //Jade
+    /// <summary>
+    /// Analyse de la saisie au clavier du joueur
+    /// </summary>
+    void SaisirDeplacementJoueur()
+    {
+      ConsoleKeyInfo info = Console.ReadKey();
+      if (info.Key == ConsoleKey.DownArrow || info.Key == ConsoleKey.S)
+      {
+        saisieDuJoueur = Deplacement.Down;
+      }
+      else if (info.Key == ConsoleKey.LeftArrow || info.Key == ConsoleKey.A)
+      {
+        saisieDuJoueur = Deplacement.Left;
+      }
+      else if (info.Key == ConsoleKey.RightArrow || info.Key == ConsoleKey.D)
+      {
+        saisieDuJoueur = Deplacement.Right;
+      }
+      else if (info.Key == ConsoleKey.Spacebar)
+      {
+        saisieDuJoueur = Deplacement.FastDown;
+      }
+    }
+    //Jade
+
+    //
+    /// <summary>
+    /// Vérifie si le déplacement que la pièce doit faire est possible
+    /// </summary>
+    /// <param name="saisieDuJoueur"></param>
+    void VerifierBlocPeutBouger()
+    {
+      
+    }
+    //
+
     #endregion
 
     #region Tests
@@ -275,6 +320,11 @@ namespace TP3
 
   }
 
+  //Jade
+  //Type enum des types de blocs possibles dans le tableau de jeu
   enum TypeBloc { None, Gelé, Carré, Ligne, T, L, J, S, Z }
 
+  //Type enum des déplacements possibles tu joueurs
+  enum Deplacement { NoMove /*pas de déplacement, donc la piève descend*/, Left, FastDown, Right, Down }
+  //Jade
 }
