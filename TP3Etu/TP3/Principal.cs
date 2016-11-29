@@ -99,7 +99,7 @@ namespace TP3
 
     //Jade
     /// <summary>
-    /// 
+    /// Permet de jouer une partie tant qu'il est possible de le faire
     /// </summary>
     void JouerPartie()
     {
@@ -107,7 +107,9 @@ namespace TP3
       bool possibleDeDeplacer = true;
       while (possibleDeJouer == true)
       {
+        //Jade
         AllocationPieceAleatoire();
+        //Jade
 
         //François
         PlacerBlocActif();
@@ -332,6 +334,11 @@ namespace TP3
 
     #endregion
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
     {
       
